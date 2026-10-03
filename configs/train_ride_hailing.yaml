@@ -1,0 +1,21 @@
+model: models/qwen3.5-2b-mlx-4bit
+train: true
+fine_tune_type: lora
+data: data/processed/ride_hailing_v2
+seed: 42
+num_layers: 16
+batch_size: 1
+iters: 100
+val_batches: 10
+steps_per_report: 10
+steps_per_eval: 50
+learning_rate: 0.00001
+adapter_path: adapters/ride_hailing_v2
+save_every: 50
+max_seq_length: 512
+grad_checkpoint: true
+mask_prompt: true
+lora_parameters:
+  rank: 8
+  dropout: 0.0
+  scale: 20.0

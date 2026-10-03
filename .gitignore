@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Downloaded model weights and adapters
+models/*
+adapters/*
+!models/.gitkeep
+!adapters/.gitkeep
+
+# Downloaded or generated datasets
+data/raw/*
+data/processed/*
+data/eval/generated/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/eval/generated/.gitkeep
+
+# Local application state
+.gradio/
+*.log
