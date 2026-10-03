@@ -2,20 +2,23 @@
 __pycache__/
 *.py[cod]
 .DS_Store
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+*.safetensors
+*.pem
+*.key
 
-# Downloaded model weights and adapters
-models/*
-adapters/*
-!models/.gitkeep
-!adapters/.gitkeep
-
-# Downloaded or generated datasets
-data/raw/*
-data/processed/*
-data/eval/generated/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/eval/generated/.gitkeep
+# Downloaded models, adapters, source data, and generated outputs
+models/
+adapters/
+data/raw/
+data/processed/
+data/eval/generated/
 
 # Local application state
 .gradio/

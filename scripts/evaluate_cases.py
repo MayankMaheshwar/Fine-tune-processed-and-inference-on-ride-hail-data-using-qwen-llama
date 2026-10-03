@@ -25,6 +25,8 @@ def main() -> None:
     )
     parser.add_argument("--max-tokens", type=int, default=160)
     args = parser.parse_args()
+    if not 64 <= args.max_tokens <= 384:
+        parser.error("--max-tokens must be between 64 and 384")
 
     report_dir = app.ROOT / "data/eval/generated"
     report_dir.mkdir(parents=True, exist_ok=True)
